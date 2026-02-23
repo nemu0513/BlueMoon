@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueMoon</title>
+    <link rel="stylesheet" href="assets/CSS/noemalize.css">
+    <link rel="stylesheet" href="assets/CSS/character.css">
+</head>
+
+<body>
+    <div class="character">
+        <div class="grad">
+            <div class="main_container">
+                <ul class="cc_navi">
+                    <li class="list">
+                        <img src="assets/img/D1.png" alt="1ページ" onclick="show_content('page1')"
+                            style="cursor: pointer;width:80px;">
+                    </li>
+                    <li class="list">
+                        <img src="assets/img/D2.png" alt="2ページ" onclick="show_content('page2')"
+                            style="cursor:pointer;width:80px;">
+                    </li>
+                    <li class="list">
+                        <img src="assets/img/D3.png">
+                    </li>
+                    <li class="list">
+                        <img src="assets/img/D4.png">
+                    </li>
+                    <li class="list">
+                        <img src="assets/img/D5.png">
+                    </li>
+                    <li class="list">
+                        <img src="assets/img/D6.png">
+                    </li>
+                    <li class="list">
+                        <img src="assets/img/D7.png">
+                    </li>
+                </ul>
+                <!-- <div class="box1"> -->
+                <div id="page1" class="cc_overview">
+                    <div class="cc_explan">
+                        <p class="cc_name">XYZ<span>cv.未定</span></p>
+                        <p class="cc_text">常に穏やかな微笑みを絶やさない、ミステリアスなバーテンダー。
+                            <br>
+                            カクテル言葉で「後がない」を意味する名の通り、彼が提供するのは人生の終着点となる「死の酒」。
+                            <br>
+                            酔いつぶれ、理性を失い、醜態を晒していく人間を眺めることに至上の悦びを感じている。
+                            <br>
+                            彼の振る舞う一杯には、毒か、あるいは真実か――。
+                        </p>
+                    </div>
+                    <div class="cc_sprite">
+                        <img class="cc1" src="assets/img/cc1.png">
+                        <p>「最後の一滴まで、美しく飲み干してくださいね。
+                            <br>
+                            ……あなたの価値が、そこで決まるんですから」
+                        </p>
+                    </div>
+                </div>
+                <!-- </div> -->
+                <div id="page2" class="cc_overview">
+                    <div class="cc_explan">
+                        <p class="cc_name">キティ<span>cv.未定</span></p>
+                        <p class="cc_text">その名の通り、子猫のような愛くるしい瞳と仕草で誰からも愛される、お店の看板娘。
+                            <br>
+                            非常に礼儀正しく、おっとりとした口調で話を聞いてくれる彼女は、疲れた客たちの心を癒やす「一番の聞き上手」。
+                            <br>
+                            控えめな性格に見えて、ここぞという時には子猫がすり寄るように懐に入ってくる、天性の「甘え上手」。
+                            <br>
+                            彼女に見つめられながらお酒を飲む時間は、まるでお日様の下で日向ぼっこをしているような、穏やかな幸福感に包まれる。
+                        </p>
+                    </div>
+                    <div class="cc_sprite">
+                        <img class="cc1" src="assets/img/cc2.png">
+                        <p>「だって、勘違いする方が悪くない？」</p>
+                    </div>
+                </div>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        // 初期表示：page1
+                        const firstPage = document.getElementById("page1");
+                        firstPage.classList.add("active");
+                    });
+
+                    function show_content(pageId) {
+                        const pages = document.querySelectorAll(".cc_overview");
+
+                        pages.forEach(function (page) {
+                            if (page.classList.contains("active")) {
+                                page.classList.remove("active");
+                                setTimeout(() => {
+                                    page.style.display = "none";
+                                }, 500);
+                            }
+                        });
+
+                        const target = document.getElementById(pageId);
+
+                        setTimeout(() => {
+                            target.style.display = "inline-block";
+                            setTimeout(() => {
+                                target.classList.add("active");
+                            }, 10);
+                        }, 500);
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        <img class="st" src="assets/img/steam.png">
+        <p>&copy; 2026 N.H All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
