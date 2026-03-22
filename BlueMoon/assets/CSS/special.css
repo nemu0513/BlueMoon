@@ -1,0 +1,181 @@
+.special {
+    width: 100%;
+    background-image: url(../img/bgi.png);
+    background-color: #0A0404;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+}
+
+.grad {
+    width: 100%;
+    height: 100%;
+    background: -moz-linear-gradient(top, rgba(70, 28, 3, 0.9), rgba(217, 217, 217, 0.9));
+    background: -webkit-linear-gradient(top, rgba(70, 28, 3, 0.9), rgba(217, 217, 217, 0.9));
+    background: linear-gradient(to bottom, rgba(70, 28, 3, 0.9), rgba(217, 217, 217, 0.9));
+}
+
+.b_main {
+    font-family: serif;
+    font-size: 40px;
+    color: white;
+    margin-top: 0;
+}
+
+.benefits_box1 {
+    margin-left: 50px;
+    margin-bottom: 100px;
+}
+
+.benefits {
+    display: flex;
+    gap: 60px;
+}
+
+.b_text {
+    color: white;
+}
+
+.input-area {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="text"] {
+    background: #0f3460;
+    border: 1px solid #16213e;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-align: center;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #e94560;
+}
+
+button#unlockBtn {
+    background: #e94560;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button#unlockBtn:hover {
+    background: #ff4d6d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);
+}
+
+.note {
+    font-size: 0.75rem;
+    margin-top: 20px;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+    width: 90%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.congrats-text {
+    font-size: 2rem;
+    color: #ffd700;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.reward-desc {
+    margin-bottom: 20px;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 60vh;
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+}
+
+.close-btn {
+    margin-top: 30px;
+    background: transparent;
+    color: #aaa;
+    border: 1px solid #aaa;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: white;
+    border-color: white;
+}
+
+.benefits_box2 {
+    margin-left: 50px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+}
+
+li img {
+    vertical-align: bottom;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+}
+
+footer {
+    background-color: #2D2525;
+    height: 100px;
+    margin-top: 0;
+}
+
+.st {
+    width: 10%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+footer p {
+    color: white;
+}

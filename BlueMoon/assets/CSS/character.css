@@ -29,15 +29,25 @@
 
 .list img {
     width: 80px;
+    cursor: pointer;
 }
 
-/* .box1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
+.list .hover {
+    display: none;
+}
+
+.list:hover img:not(.hover) {
+    display: none !important;
+}
+
+.list:hover .hover {
+    display: block !important;
+}
 
 .cc_overview {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     opacity: 0;
     display: none;
@@ -49,11 +59,12 @@
 }
 
 .cc_overview.active {
-    display: inline-block;
+    display: flex;
     opacity: 1;
 }
 
 .cc_explan {
+    flex: 1;
     width: 50%;
 }
 
@@ -72,6 +83,7 @@ span {
 }
 
 .cc_sprite {
+    flex-shrink: 0;
     width: 500px;
     height: 707px;
     background-image: url(../img/back.png);

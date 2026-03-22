@@ -17,9 +17,13 @@
                     <li class="list">
                         <img src="assets/img/D1.png" alt="1ページ" onclick="show_content('page1')"
                             style="cursor: pointer;width:80px;">
+                        <img class="hover" src="assets/img/D1-2.png" alt="ホバー" onclick="show_content('page1')"
+                            style="cursor: pointer;width:80px;">
                     </li>
                     <li class="list">
                         <img src="assets/img/D2.png" alt="2ページ" onclick="show_content('page2')"
+                            style="cursor:pointer;width:80px;">
+                        <img class="hover" src="assets/img/D2-2.png" alt="ホバー" onclick="show_content('page2')"
                             style="cursor:pointer;width:80px;">
                     </li>
                     <li class="list">
@@ -38,28 +42,28 @@
                         <img src="assets/img/D7.png">
                     </li>
                 </ul>
-                <!-- <div class="box1"> -->
-                <div id="page1" class="cc_overview">
-                    <div class="cc_explan">
-                        <p class="cc_name">XYZ<span>cv.未定</span></p>
-                        <p class="cc_text">常に穏やかな微笑みを絶やさない、ミステリアスなバーテンダー。
-                            <br>
-                            カクテル言葉で「後がない」を意味する名の通り、彼が提供するのは人生の終着点となる「死の酒」。
-                            <br>
-                            酔いつぶれ、理性を失い、醜態を晒していく人間を眺めることに至上の悦びを感じている。
-                            <br>
-                            彼の振る舞う一杯には、毒か、あるいは真実か――。
-                        </p>
-                    </div>
-                    <div class="cc_sprite">
-                        <img class="cc1" src="assets/img/cc1.png">
-                        <p>「最後の一滴まで、美しく飲み干してくださいね。
-                            <br>
-                            ……あなたの価値が、そこで決まるんですから」
-                        </p>
+                <div class="box1">
+                    <div id="page1" class="cc_overview">
+                        <div class="cc_explan">
+                            <p class="cc_name">XYZ<span>cv.未定</span></p>
+                            <p class="cc_text">常に穏やかな微笑みを絶やさない、ミステリアスなバーテンダー。
+                                <br>
+                                カクテル言葉で「後がない」を意味する名の通り、彼が提供するのは人生の終着点となる「死の酒」。
+                                <br>
+                                酔いつぶれ、理性を失い、醜態を晒していく人間を眺めることに至上の悦びを感じている。
+                                <br>
+                                彼の振る舞う一杯には、毒か、あるいは真実か――。
+                            </p>
+                        </div>
+                        <div class="cc_sprite">
+                            <img class="cc1" src="assets/img/cc1.png">
+                            <p>「最後の一滴まで、美しく飲み干してくださいね。
+                                <br>
+                                ……あなたの価値が、そこで決まるんですから」
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <!-- </div> -->
                 <div id="page2" class="cc_overview">
                     <div class="cc_explan">
                         <p class="cc_name">キティ<span>cv.未定</span></p>
@@ -100,7 +104,7 @@
                         const target = document.getElementById(pageId);
 
                         setTimeout(() => {
-                            target.style.display = "inline-block";
+                            target.style.display = "flex";
                             setTimeout(() => {
                                 target.classList.add("active");
                             }, 10);

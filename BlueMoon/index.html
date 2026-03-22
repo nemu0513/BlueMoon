@@ -3,82 +3,179 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueMoon</title>
-    <link rel="stylesheet" href="assets/CSS/noemalize.css">
-    <link rel="stylesheet" href="assets/CSS/style.css">
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+            background: #231c1c;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            display: block;
+        }
+
+        #entry_layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #231c1c;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 5000;
+        }
+
+        .entry_buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .entry_buttons button {
+            width: 150px;
+            height: 60px;
+            background: transparent;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .on_btn {
+            color: #8C1A1C !important;
+            border-color: #8C1A1C !important;
+        }
+
+        .hamburger {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 10000;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 4px;
+            background: white;
+            transition: 0.4s;
+        }
+
+        #nav_menu {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            transition: 0.5s;
+            z-index: 9000;
+            padding-top: 80px;
+        }
+
+        #nav_menu.open {
+            right: 0;
+        }
+
+        #nav_menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #nav_menu li {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #nav_menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+            font-family: serif;
+            display: block;
+        }
+
+        #nav_menu a:hover {
+            color: #8C1A1C;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(13px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-13px) rotate(-45deg);
+        }
+    </style>
 </head>
 
 <body>
-    <div class="kv">
-        <img class="bg" src="assets/img/kv.png">
-        <h1 class="logo">BlueMoon</h1>
-    </div>
 
-    <div class="main_container">
-        <div class="grad"></div>
-        <ul class="menu_list">
-            <li>TOP</li>
-            <li><a href="story.html">STORY</a></li>
-            <li><a href="character.html">CHARACTER</a></li>
-            <li><a href="system.html">SYSTEM</a></li>
-            <li>SPRCIAL</li>
-        </ul>
-        <div class="info_wrapper">
-            <img class="by" src="assets/img/BY.png">
-            <div class="info_content">
-                <div class="info_bar">PRODUCT INFO</div>
-                <div class="info_img">
-                    <img class="package1" src="assets/img/package1.png">
-                    <img class="package2" src="assets/img/package2.png">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th class="ov">タイトル</th>
-                                <th class="pa">|</th>
-                                <td class="cont">BlueMoon</td>
-                            </tr>
-                            <tr>
-                                <th class="ov">対応機種</th>
-                                <th class="pa">|</th>
-                                <td class="cont">PC（Steam配信）</td>
-                            </tr>
-                            <tr>
-                                <th class="ov">ジャンル</th>
-                                <th class="pa">|</th>
-                                <td class="cont">酩酊断罪AVG</td>
-                            </tr>
-                            <tr>
-                                <th class="ov">対応機種</th>
-                                <th class="pa">|</th>
-                                <td class="cont">Windows/Mac両対応</td>
-                            </tr>
-                            <tr>
-                                <th class="ov">発売日</th>
-                                <th class="pa">|</th>
-                                <td class="cont">未定</td>
-                            </tr>
-                            <tr>
-                                <th class="ov">価格</th>
-                                <th class="pa">|</th>
-                                <td class="cont">ボイス有　未定</td>
-                            </tr>
-                            <tr>
-                                <th class="ov"></th>
-                                <th class="pa">|</th>
-                                <td class="cont">ボイス無　未定</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    <audio id="bgm" src="assets/img/night light.mp3" loop></audio>
+
+    <div id="entry_layer">
+        <h1 style="font-family: serif; font-size: 40px;">Welcome to BlueMoon</h1>
+        <p>SOUND SETTING</p>
+        <div class="entry_buttons">
+            <button class="on_btn" onclick="startSite(true)">ON</button>
+            <button class="off_btn" onclick="startSite(false)">OFF</button>
         </div>
     </div>
 
-    <footer>
-        <img class="st" src="assets/img/steam.png">
-        <p>&copy; 2026 N.H All Rights Reserved.</p>
-    </footer>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="top_page.html" target="contents_frame" onclick="toggleMenu()">TOP</a></li>
+            <li><a href="story.html" target="contents_frame" onclick="toggleMenu()">STORY</a></li>
+            <li><a href="character.html" target="contents_frame" onclick="toggleMenu()">CHARACTER</a></li>
+            <li><a href="system.html" target="contents_frame" onclick="toggleMenu()">SYSTEM</a></li>
+            <li><a href="special.html" target="contents_frame" onclick="toggleMenu()">SPECIAL</a></li>
+        </ul>
+    </nav>
+
+    <iframe src="top_page.html" name="contents_frame"></iframe>
+
+    <script>
+        function startSite(isSoundOn) {
+            const bgm = document.getElementById('bgm');
+            if (isSoundOn) {
+                bgm.play().catch(e => console.log("Music play blocked: ", e));
+            }
+            document.getElementById('entry_layer').style.display = 'none';
+        }
+        function toggleMenu() {
+            const menu = document.getElementById('nav_menu');
+            const hamburger = document.querySelector('.hamburger');
+            if (menu && hamburger) {
+                menu.classList.toggle('open');
+                hamburger.classList.toggle('active');
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -22,7 +22,7 @@
 .flow {
     display: block;
     width: 70%;
-    margin: 100px auto;
+    margin: 0 auto 80px;
     /* z-index: 2; */
 }
 
@@ -32,6 +32,7 @@
     align-items: center;
     justify-content: center;
     gap: 40px;
+    margin: 100px;
     padding-bottom: 50px;
     width: 70%;
     margin: 0 auto;

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueMoon</title>
+    <link rel="stylesheet" href="assets/CSS/noemalize.css">
+    <link rel="stylesheet" href="assets/CSS/special.css">
+</head>
+
+<body>
+    <div class="special">
+        <div class="grad">
+            <div class="main_container">
+                <div class="benefits_box1">
+                    <p class="b_main">購入者特典</p>
+                    <div class="benefits">
+                        <img class="b_img" src="assets/img/b1.png">
+                        <div class="b_box">
+                            <p class="b_text">ゲームクリア後に表示されるパスワードを入力することで
+                                <br>
+                                書き下ろし壁紙を入手することができます。
+                            </p>
+                            <div class="input-area">
+                                <input typea="text" id="serialCode" placeholder="例:1234-5678" spellcheck="false">
+                                <button id="unlockBtn">特典をアンロック！</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="benefits_box2">
+                    <p class="b_main">応援バナー</p>
+                    <div class="benefits_list">
+                        <ul>
+                            <li><img src="assets/img/cb1.png"></li>
+                            <li><img src="assets/img/cb2.png"></li>
+                            <li><img src="assets/img/cb3.png"></li>
+                            <li><img src="assets/img/cb3.png"></li>
+                            <li><img src="assets/img/cb3.png"></li>
+                            <li><img src="assets/img/cb3.png"></li>
+                            <li><img src="assets/img/cb3.png"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="rewardModal" class="modal-overlay">
+                    <div class="modal-content">
+                        <div class="congrats-text">CONGRATULATIONS!</div>
+                        <p class="reward-desc">限定デジタルイラストをアンロックしました</p>
+
+                        <div class="image-wrapper">
+                            <img src="assets/img/rw.png" alt="特典画像" id="rewardImage">
+                        </div>
+                        <button class="close-btn" id="closeBtn">閉じる</button>
+                    </div>
+                </div>
+
+                <script>
+                    const unlockBtn = document.getElementById('unlockBtn');
+                    const closeBtn = document.getElementById('closeBtn');
+                    const modal = document.getElementById('rewardModal');
+                    const serialInput = document.getElementById('serialCode');
+
+                    unlockBtn.onclick = function () {
+                        const code = serialInput.value.trim();
+
+                        if (code === "aaaaa") {
+                            modal.style.display = 'block';
+                            console.log("特典が解放されました！");
+                        } else {
+                            alert("コードを入力してください！");
+                        }
+                    };
+
+                    closeBtn.onclick = function () {
+                        modal.style.display = 'none';
+                        serialInput.value = "";
+                    };
+
+                    window.onclick = function (event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    };
+                </script>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <footer>
+        <img class="st" src="assets/img/steam.png">
+        <p>&copy; 2026 N.H All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

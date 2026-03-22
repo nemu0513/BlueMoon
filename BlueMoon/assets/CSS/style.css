@@ -1,3 +1,55 @@
+#entry_layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2D2525;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 1s ease;
+    margin: 0;
+    padding: 0;
+}
+
+.entry_layer h1 {
+    color: white;
+    align-items: center;
+    font-family: serif;
+}
+
+.entry_layer p {
+    color: white;
+    align-items: center;
+    font-family: serif;
+}
+
+button {
+    color: #8C1A1C;
+}
+
+.entry_buttons button {
+    background: transparent;
+    border: 1px solid white;
+    padding: 10px 40px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.entry_buttons button:hover {
+    background: white;
+    color: block;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .bg {
     position: relative;
     width: 100%;
@@ -91,6 +143,10 @@ li {
 .by {
     width: 400px;
     height: auto;
+    /* transition:0.3s;
+    cursor: pointer;
+    border:none;
+    display:block; */
     z-index: 2;
 }
 
