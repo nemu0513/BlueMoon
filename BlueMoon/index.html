@@ -159,6 +159,23 @@
 
     <iframe src="top_page.html" name="contents_frame"></iframe>
 
+    <style>
+        @media screen and (max-width:768px) {
+
+            html,
+            body {
+                overflow-x: hidden;
+                width: 100%;
+                position: relative;
+            }
+
+            .hamburger,
+            #nav_nemu {
+                max-width: 100vw;
+            }
+        }
+    </style>
+
     <script>
         function startSite(isSoundOn) {
             const bgm = document.getElementById('bgm');

@@ -1,3 +1,19 @@
+header {
+    position: relative;
+    z-index: 0;
+    height: 65px;
+    background-image: url(../img/counter.png);
+    background-size: cover;
+}
+
+.tag {
+    font-size: 30px;
+    font-family: serif;
+    color: white;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 .character {
     width: 100%;
     background-image: url(../img/bgi.png);
@@ -27,21 +43,47 @@
     /* z-index: 2; */
 }
 
+.icon-svg {
+    width: 80px;
+    height: 100px;
+    cursor: pointer;
+    background-color: black;
+    -webkit-mask-image: url("../img/D1.svg");
+    mask-image: url("../img/D1.svg");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transition: background-color 0.3s;
+    display: block;
+}
+
+.icon-svg:hover {
+    background-color: #8C1A1C;
+}
+
+.icon-svg2 {
+    width: 80px;
+    height: 100px;
+    cursor: pointer;
+    background-color: black;
+    -webkit-mask-image: url("../img/D2.svg");
+    mask-image: url("../img/D2.svg");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    transition: background-color 0.3s;
+    display: block;
+}
+
+.icon-svg2:hover {
+    background-color: #8C1A1C;
+}
+
 .list img {
     width: 80px;
     cursor: pointer;
-}
-
-.list .hover {
-    display: none;
-}
-
-.list:hover img:not(.hover) {
-    display: none !important;
-}
-
-.list:hover .hover {
-    display: block !important;
 }
 
 .cc_overview {
@@ -100,6 +142,7 @@ span {
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
+    filter: drop-shadow(10px 10px 2px rgba(140, 26, 28, 0.5));
 }
 
 .cc_sprite p {
@@ -122,8 +165,10 @@ footer {
     width: 10%;
     margin-top: 20px;
     margin-left: 20px;
+    filter: drop-shadow(1px 0 0 white) drop-shadow(0 1px 0 white) drop-shadow(-1px 0 0 white) drop-shadow(0 -1px 0 white);
 }
 
 footer p {
     color: white;
+    padding-left: 20px;
 }
