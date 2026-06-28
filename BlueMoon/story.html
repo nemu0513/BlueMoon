@@ -5,42 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueMoon</title>
-    <link rel="stylesheet" href="assets/CSS/noemalize.css">
+    <link rel="stylesheet" href="assets/CSS/normalize.css">
     <link rel="stylesheet" href="assets/CSS/story.css">
 </head>
 
 <body>
     <header>
-        <p class="tag">STORY</p>
+        <div class="header_img">
+            <div class="a">
+                <img class="title" src="assets/img/title.png">
+                <!-- ハンバーガーメニュー -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <nav id="nav_menu">
+            <ul>
+                <li><a href=index.html target="=_self" onclick="toggleMenu()">TOP</a></li>
+                <li><a href="story.html" target="_self" onclick="toggleMenu()">STORY</a></li>
+                <li><a href="character.html" target="_self" onclick="toggleMenu()">CHARACTER</a></li>
+                <li><a href="system.html" target="_self" onclick="toggleMenu()">SYSTEM</a></li>
+                <li><a href="special.html" target="_self" onclick="toggleMenu()">SPECIAL</a></li>
+            </ul>
+        </nav>
     </header>
+
     <div class="main_container">
         <div class="grad"></div>
         <div class="story">
-            <div class="text">
-                <br>
-                <br>
-                飲み歩きの末に辿り着いたバー
-                <br>
-                <br>
-                <span>「BlueMoon」</span>
-                <br>
-                <br>
-                そこは夜な夜な気まぐれなバーテンダーにより
-                <br class="tc">
-                強制参加の飲みゲーが行われるバーだった。
-                <br>
-                <br>
-                仕事終わりの個性的なキャラクター達と共に
-                <br class="tc">
-                お酒を酌み交わすことになるが
-                <br>
-                <br>
-                果たして主人公は無事に帰れるのか・・・
-            </div>
-            <div class="textbox">
-                <p>当ゲームはバーを舞台とし飲みゲームを題材としていますが</p>
-                <p>過度な飲酒を奨めるものではありません。</p>
-                <p>ご自身のペースで楽しく飲酒を行ってください。</p>
+            <div class="text_container">
+                <div class="text">
+                    <br>
+                    <br>
+                    飲み歩きの末に辿り着いたバー
+                    <br>
+                    <br>
+                    <span>「BlueMoon」</span>
+                    <br>
+                    <br>
+                    そこは夜な夜な気まぐれなバーテンダーにより
+                    <br class="tc">
+                    強制参加の飲みゲーが行われるバーだった。
+                    <br>
+                    <br>
+                    仕事終わりの個性的なキャラクター達と共に
+                    <br class="tc">
+                    お酒を酌み交わすことになるが
+                    <br>
+                    <br>
+                    果たして主人公は無事に帰れるのか・・・
+                </div>
+                <div class="textbox">
+                    <p>当ゲームはバーを舞台とし飲みゲームを題材としていますが</p>
+                    <p>過度な飲酒を奨めるものではありません。</p>
+                    <p>ご自身のペースで楽しく飲酒を行ってください。</p>
+                </div>
             </div>
         </div>
     </div>
@@ -49,6 +70,17 @@
         <img class="st" src="assets/img/steam.png">
         <p>&copy; 2026 N.H All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav_menu');
+            const hamburger = document.querySelector('.hamburger');
+            if (menu && hamburger) {
+                menu.classList.toggle('open');
+                hamburger.classList.toggle('active');
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -5,18 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BlueMoon</title>
-    <link rel="stylesheet" href="assets/CSS/noemalize.css">
+    <link rel="stylesheet" href="assets/CSS/normalize.css">
     <link rel="stylesheet" href="assets/CSS/system.css">
 </head>
 
 <body>
     <header>
-        <p class="tag">SYSTEM</p>
+        <div class="header_img">
+            <div class="a">
+                <img class="title" src="assets/img/title.png">
+                <!-- ハンバーガーメニュー -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+
+        <nav id="nav_menu">
+            <ul>
+                <li><a href=index.html target="=_self" onclick="toggleMenu()">TOP</a></li>
+                <li><a href="story.html" target="_self" onclick="toggleMenu()">STORY</a></li>
+                <li><a href="character.html" target="_self" onclick="toggleMenu()">CHARACTER</a></li>
+                <li><a href="system.html" target="_self" onclick="toggleMenu()">SYSTEM</a></li>
+                <li><a href="special.html" target="_self" onclick="toggleMenu()">SPECIAL</a></li>
+            </ul>
+        </nav>
     </header>
+
     <div class="system">
         <div class="grad">
             <div class="main_container">
                 <img class="flow" src="assets/img/flow.png">
+                <img class="flow2" src="assets/img/flow2.png">
                 <div class="overview">
                     <div class="overview_box">
                         <img class="ov_img" src="assets/img/ov1.png">
@@ -27,7 +47,7 @@
                             何気ない一言が、この夜の結末を左右するかもしれません。
                         </p>
                     </div>
-                    <div class="overview_box">
+                    <div class="overview_box2">
                         <p class="ov_text">
                             各ラウンドではミニゲームによって勝敗が決まり敗者はテーブルに並べられた
                             <br>
@@ -61,6 +81,17 @@
         <img class="st" src="assets/img/steam.png">
         <p>&copy; 2026 N.H All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav_menu');
+            const hamburger = document.querySelector('.hamburger');
+            if (menu && hamburger) {
+                menu.classList.toggle('open');
+                hamburger.classList.toggle('active');
+            }
+        }
+    </script>
 </body>
 
 </html>
