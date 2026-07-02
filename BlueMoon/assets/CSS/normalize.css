@@ -1,9 +1,154 @@
+/* <HTML共通部分> */
+* {
+  box-sizing: border-box;
+  /* outline: 1px solid red !important; */
+}
+
+/* <header共通部分> */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 8000;
+}
+
+.header_img {
+  position: relative;
+  height: 65px;
+  background-image: url(../img/counter.png);
+  background-size: cover;
+}
+
+.h {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.title {
+  z-index: 1;
+}
+
+/* <ハンバーガーメニュー> */
+.hamburger {
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: white;
+  transition: 0.4s;
+}
+
+#nav_menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  transition: 0.5s;
+  z-index: 9000;
+  padding-top: 80px;
+}
+
+#nav_menu.open {
+  right: 0;
+}
+
+#nav_menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+#nav_menu li {
+  padding: 20px;
+  text-align: center;
+}
+
+#nav_menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: "Shippori Mincho B1", serif;
+  display: block;
+}
+
+#nav_menu a:hover {
+  color: #8C1A1C;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+/* <ハンバーガーメニュー終了> */
+/* <header共通部分終了> */
+
+/* <footer共通部分> */
+footer {
+  background-color: #2D2525;
+  height: auto;
+}
+
+.st {
+  width: 10%;
+  margin-top: 20px;
+  margin-left: 20px;
+  filter: drop-shadow(3px 0 0 white) drop-shadow(0 3px 0 white) drop-shadow(-3px 0 0 white) drop-shadow(0 -3px 0 white);
+}
+
+footer p {
+  color: white;
+  font-family: "IBM Plex Sans JP", sans-serif;
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+/* <footer共通部分終了> */
+
+/* <レスポンシブ共通部分> */
+@media screen and (max-width:768px) {
+  .st {
+    width: 20%;
+  }
+
+  footer p {
+    font-size: 2vw;
+  }
+}
+
+/* <レスポンシブ共通部分終了> */
+/* <HTML共通部分終了> */
+
 html {
-  line-height: 1.15;
+  /* line-height: 1.15; */
   -webkit-text-size-adjust: 100%;
 }
 
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
 }
@@ -84,7 +229,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
+  font-family: "IBM Plex Sans JP", sans-serif;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;

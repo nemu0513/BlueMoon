@@ -7,85 +7,17 @@
     <title>BlueMoon</title>
     <link rel="stylesheet" href="assets/CSS/normalize.css">
     <link rel="stylesheet" href="assets/CSS/style.css">
-    <style>
-        .hamburger {
-            /* position: fixed; */
-            top: 20px;
-            right: 20px;
-            width: 40px;
-            height: 30px;
-            cursor: pointer;
-            z-index: 10000;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 100%;
-            height: 4px;
-            background: white;
-            transition: 0.4s;
-        }
-
-        #nav_menu {
-            position: fixed;
-            top: 0;
-            right: -300px;
-            width: 300px;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            transition: 0.5s;
-            z-index: 9000;
-            padding-top: 80px;
-        }
-
-        #nav_menu.open {
-            right: 0;
-        }
-
-        #nav_menu ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        #nav_menu li {
-            padding: 20px;
-            text-align: center;
-        }
-
-        #nav_menu a {
-            color: white;
-            text-decoration: none;
-            font-size: 22px;
-            font-family: serif;
-            display: block;
-        }
-
-        #nav_menu a:hover {
-            color: #8C1A1C;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: translateY(13px) rotate(45deg);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: translateY(-13px) rotate(-45deg);
-        }
-    </style>
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Shippori+Mincho+B1&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <!-- トップページ -->
     <header>
         <div class="header_img">
-            <div class="a">
+            <div class="h">
                 <img class="title" src="assets/img/title.png">
                 <!-- ハンバーガーメニュー -->
                 <div class="hamburger" onclick="toggleMenu()">
@@ -175,24 +107,6 @@
         <img class="st" src="assets/img/steam.png">
         <p>&copy; 2026 N.H All Rights Reserved.</p>
     </footer>
-    <!-- トップページ終了 -->
-
-    <style>
-        @media screen and (max-width:768px) {
-
-            html,
-            body {
-                /* overflow-x: hidden; */
-                width: 100%;
-                position: relative;
-            }
-
-            .hamburger,
-            #nav_nemu {
-                max-width: 100vw;
-            }
-        }
-    </style>
 
     <script>
         function toggleMenu() {
